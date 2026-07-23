@@ -1,0 +1,312 @@
+/* Templates & Printable A4 CV Container Styles */
+.cv-preview-wrapper {
+  background-color: #475569;
+  padding: 2.5rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cv-toolbar {
+  background: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  max-width: 900px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.cv-paper-container {
+  background: #ffffff;
+  width: 210mm;
+  min-height: 297mm;
+  padding: 24mm 20mm;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+  box-sizing: border-box;
+  transform-origin: top center;
+  transition: transform 0.2s ease;
+  color: #1e293b;
+  font-family: var(--font-body);
+}
+
+/* ==========================================================================
+   TEMPLATE 1: MODERN (Clean, Professional Accent Bar, 2-Column Grid)
+   ========================================================================== */
+.tpl-modern {
+  font-family: 'Inter', sans-serif;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.tpl-modern-header {
+  border-bottom: 3px solid #4f46e5;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.tpl-modern-name {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.tpl-modern-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #4f46e5;
+  margin-top: 0.25rem;
+}
+
+.tpl-modern-contact {
+  text-align: right;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.tpl-modern-summary {
+  background-color: #f8fafc;
+  border-left: 4px solid #4f46e5;
+  padding: 0.85rem 1.1rem;
+  font-size: 0.925rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0 6px 6px 0;
+}
+
+.tpl-modern-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.75rem;
+}
+
+.tpl-section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1.5px solid #cbd5e1;
+}
+
+.tpl-item {
+  margin-bottom: 1.1rem;
+}
+
+.tpl-item-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1e293b;
+}
+
+.tpl-item-sub {
+  font-size: 0.85rem;
+  color: #4f46e5;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.tpl-item-desc {
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+.tpl-skill-badge {
+  display: inline-block;
+  background-color: #e0e7ff;
+  color: #3730a3;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-right: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+/* ==========================================================================
+   TEMPLATE 2: CLASSIC (Traditional Corporate Serif Layout)
+   ========================================================================== */
+.tpl-classic {
+  font-family: 'Merriweather', Georgia, serif;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.tpl-classic-header {
+  text-align: center;
+  border-bottom: 2px double #1f2937;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tpl-classic-name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.tpl-classic-title {
+  font-size: 1rem;
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 0.25rem;
+}
+
+.tpl-classic-contact {
+  font-size: 0.85rem;
+  color: #374151;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.tpl-classic .tpl-section-title {
+  font-family: 'Merriweather', serif;
+  border-bottom: 1px solid #1f2937;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   TEMPLATE 3: MINIMAL (ATS-Optimized High-Contrast Layout)
+   ========================================================================== */
+.tpl-minimal {
+  font-family: 'Inter', sans-serif;
+  color: #000000;
+  line-height: 1.5;
+}
+
+.tpl-minimal-header {
+  margin-bottom: 1.5rem;
+}
+
+.tpl-minimal-name {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #000000;
+  letter-spacing: -0.03em;
+}
+
+.tpl-minimal-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #404040;
+}
+
+.tpl-minimal-contact {
+  font-size: 0.85rem;
+  color: #525252;
+  margin-top: 0.4rem;
+}
+
+.tpl-minimal .tpl-section-title {
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-bottom: 2px solid #000000;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.2rem;
+}
+
+/* ==========================================================================
+   TEMPLATE 4: CREATIVE (Sidebar Layout, Vivid Accent Pills, Dynamic Design)
+   ========================================================================== */
+.tpl-creative {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.tpl-creative-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+.tpl-creative-sidebar {
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.tpl-creative-sidebar h3 {
+  color: #38bdf8;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.85rem;
+}
+
+.tpl-creative-main {
+  padding-top: 0.5rem;
+}
+
+.tpl-creative-name {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.1;
+}
+
+.tpl-creative-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0284c7;
+  margin-bottom: 1.25rem;
+}
+
+.tpl-creative-pill {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-right: 0.3rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Mobile Responsive for A4 Container & CV Preview */
+@media (max-width: 768px) {
+  .cv-preview-wrapper {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .cv-toolbar {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .cv-paper-container {
+    width: 100%;
+    padding: 15mm 10mm;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 480px) {
+  .cv-paper-container {
+    padding: 10mm 6mm;
+    font-size: 0.9rem;
+  }
+}

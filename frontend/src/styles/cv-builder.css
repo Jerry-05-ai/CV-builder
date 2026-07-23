@@ -1,0 +1,243 @@
+/* Multi-Step CV Builder Styles */
+.builder-stepper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.step-item.active {
+  opacity: 1;
+}
+
+.step-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--border-color);
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.step-item.active .step-badge {
+  background-color: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 0 0 4px var(--primary-light);
+}
+
+.step-item.completed .step-badge {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+.step-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.step-line {
+  flex: 1;
+  max-width: 80px;
+  height: 2px;
+  background-color: var(--border-color);
+}
+
+/* Step 1 Input Box */
+.ai-input-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.ai-prompt-textarea {
+  width: 100%;
+  min-height: 220px;
+  padding: 1.25rem;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  resize: vertical;
+  margin-bottom: 1.5rem;
+}
+
+.ai-prompt-textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+/* Step 2 Structured Form Sections */
+.form-section-card {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  padding: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.section-header-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.array-item-card {
+  background: var(--bg-main);
+  border: 1px dashed #cbd5e1;
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.remove-item-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #fee2e2;
+  color: #ef4444;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.remove-item-btn:hover {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.add-item-btn {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border: 1px dashed var(--primary);
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.add-item-btn:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .form-grid-2, .form-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .builder-stepper {
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .step-title {
+    display: none;
+  }
+
+  .step-line {
+    max-width: 30px;
+  }
+
+  .step-badge {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .ai-input-card {
+    padding: 1.5rem;
+  }
+
+  .ai-prompt-textarea {
+    min-height: 150px;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .form-section-card {
+    padding: 1.25rem;
+  }
+
+  .array-item-card {
+    padding: 1rem;
+  }
+
+  .section-header-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .builder-stepper {
+    gap: 0.5rem;
+  }
+
+  .step-line {
+    max-width: 20px;
+  }
+
+  .step-badge {
+    width: 26px;
+    height: 26px;
+    font-size: 0.7rem;
+  }
+
+  .ai-input-card {
+    padding: 1rem;
+  }
+
+  .ai-prompt-textarea {
+    min-height: 120px;
+  }
+}
